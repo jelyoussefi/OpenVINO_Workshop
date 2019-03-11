@@ -54,7 +54,6 @@ The basic flow is outlined below:
  
  - **Double-click** the **'face_detector.bat'** file to start the application > "openvino_face_detection\face_detector.bat"
      
-![Run Application](images/openvino_face_detector_ra.jpg)
  - Once the camera has loaded and the main loop begins a window will also appear showing the camera frames and fps values in the top left.
  
 ![Application Running](images/openvino_face_detector_ar.jpg)
