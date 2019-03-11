@@ -12,7 +12,6 @@ If you have `git` installed, the easiest way to access these files is to clone t
     git clone https://github.com/jelyoussefi/OpenVINO_Workshop
 ```
 
-
 ### Without `git`
 
 Alternatively, you can download the entire repository as a `.zip` file from the repository's [homepage](https://github.com/jelyoussefi/OpenVINO_Workshop) using the green "Clone or download" button in the top right hand corner.
@@ -22,7 +21,7 @@ Alternatively, you can download the entire repository as a `.zip` file from the 
 ## Getting Started
 
 - The tutorial code is provided as a CMake project so the first step is to use a CMake generator to generate our Visual Studio Solution so we can use the Visual Studio IDE for developing and debugging the code. A batch file to automate this process is provided in the project directory:
-	- **Double-click** the **'create_vs2017_solution.bat'** file to generate the VS Solution files > **"openvino_face_detection\create_vs2017_solution.bat"**
+- **Double-click** the **'create_vs2017_solution.bat'** file to generate the VS Solution files > **"openvino_face_detection\create_vs2017_solution.bat"**
 
 - Once completed you can load the **'openvino_face_detection'** Visual Studio Solution file which you just generated > **"openvino_face_detection\build\openvino_face_detection.sln"**
 
