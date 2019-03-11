@@ -61,10 +61,10 @@ The basic flow is outlined below:
 ## Face Detection using Intel® OpenVINO™ Toolkit
 We will now add the necessary code to implement real-time face detection using the Intel(® OpenVINO™ Toolkit. We will specifically be using the Inference Engine API included as part of the toolkit along with an Intel® provided pretrained model which will allow us to perform inference on each camera frame and highlight faces detected within it.
 
-## Full Implementation
-the **"openvino_face_detection\src\main_openvino.cpp"** file contains the full implementation of the Face Detection using Intel® OpenVINO™ Toolkit
+### Full Implementation
+the **"openvino_face_detection\src\main_openvino.cpp"** file contains the full implementation of the Face Detection using Intel® OpenVINO™ Toolkit. Copy this file to openvino_face_detection\src\main.cpp and repeat again the "Build & Run The Code" steps.
 
-## Understanding The Code
+### Understanding The Code
 A typical Inference Engine API workflow which we will implement in the following section is outlined below:
 
  1. **Select Plugin** - The Inference Engine uses a plugin architecture. An Inference Engine plugin is a software component which provides an implementation for inference on a given Intel® hardware device. There are a number of plugins included with the Intel® Distribution of OpenVINO™ Toolkit for a range of target hardware including CPU, GPU, VPU and FPGA. 
