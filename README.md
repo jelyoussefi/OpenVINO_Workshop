@@ -41,7 +41,7 @@ The basic flow is outlined below:
 	- Grab next frame from camera
 	- Loop until 'Esc' key is pressed
 
-## Build & Run The Code
+## <a name="buildAndRunTheCode"></a>Build & Run The Code
 
  - Build the solution: **Build->Build Solution**
  
@@ -62,7 +62,9 @@ The basic flow is outlined below:
 We will now add the necessary code to implement real-time face detection using the Intel(® OpenVINO™ Toolkit. We will specifically be using the Inference Engine API included as part of the toolkit along with an Intel® provided pretrained model which will allow us to perform inference on each camera frame and highlight faces detected within it.
 
 ### Full Implementation
-the **"openvino_face_detection\src\main_openvino.cpp"** file contains the full implementation of the Face Detection using Intel® OpenVINO™ Toolkit. Copy this file to openvino_face_detection\src\main.cpp and repeat again the "Build & Run The Code" steps.
+- The **"openvino_face_detection\src\main_openvino.cpp"** file contains the full implementation of the Face Detection using Intel® OpenVINO™ Toolkit. Copy this file to **"openvino_face_detection\src\main.cpp"** 
+
+- Once again [build and run the solution](#buildAndRunTheCode).
 
 ![Application Running](images/openvino_face_detector_ar2.jpg)
 
