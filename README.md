@@ -2,22 +2,32 @@
 # Simple Face Detection using Intel® OpenVINO™ Toolkit (Windows)
 In this tutorial you will build a simple application capable of detecting faces in a live camera stream using the Intel® OpenVINO™ Toolkit and an Intel® pretrained model. Once completed you will have an understanding of the code required to start creating your own OpenVINO™ based solutions and how to target various accelerators in the Intel® portfolio (CPU, GPU, VPU).
 
+## Downloading the Files
+
+### With `git`
+
+If you have `git` installed, the easiest way to access these files is to clone the repository to the directory of your choice:
+
+```console
+    git clone https://github.com/realpython/materials.git
+```
+
+
+
+### Without `git`
+
+Alternatively, you can download the entire repository as a `.zip` file from the repository's [homepage](https://github.com/jelyoussefi/OpenVINO_Workshop) using the green "Clone or download" button in the top right hand corner.
+
+![Download repo as zip](download-zip.gif)
+
 ## Getting Started
 
 - The tutorial code is provided as a CMake project so the first step is to use a CMake generator to generate our Visual Studio Solution so we can use the Visual Studio IDE for developing and debugging the code. A batch file to automate this process is provided in the project directory:
-	- **Double-click** the **'create_vs2015_solution.bat'** file to generate the VS Solution files > **"Retail_Workshop\openvino_face_detection\create_vs2015_solution.bat"**
+	- **Double-click** the **'create_vs2017_solution.bat'** file to generate the VS Solution files > **"OpenVINO_Workshop\openvino_face_detection\create_vs2017_solution.bat"**
 
-- Once completed you can load the **'openvino_face_detection'** Visual Studio Solution file which you just generated > **"Retail_Workshop\openvino_face_detection\openvino_face_detection.sln"**
+- Once completed you can load the **'openvino_face_detection'** Visual Studio Solution file which you just generated > **"OpenVINO_Workshop\openvino_face_detection\build\openvino_face_detection.sln"**
 
-- Once Visual Studio has loaded you will notice there are 4 projects in our solution listed in the **Solution Explorer** in the right-hand pane. The main application project is called **'face_detector'** and contains the main application code. Before we get started we need to set this project to be the default for debugging. **Right-click** on the top level solution in the **Solution Explorer** window and select **Properties**
-
-![Solution Properties](images/openvino_face_detector_sp.jpg)
-
- - In the **Properties** window select **'face_detector'** in the **Single startup project** drop down box and then click **Apply** and finally **OK** to close the window.
-
-![Solution Properties Edit](images/openvino_face_detector_spe.jpg)
-
- - Expand the **face_detector** project in the **Solution Explorer** in the right-hand pane and navigate to the **'src'** directory. **Double-click** on the **main.cpp** file to load the main application code.
+- Once Visual Studio has loaded, expand the **face_detector** project in the **Solution Explorer** in the right-hand pane and navigate to the **'src'** directory. **Double-click** on the **main.cpp** file to load the main application code.
 
 ![Project Load Code](images/openvino_face_detector_plc.jpg)
 
