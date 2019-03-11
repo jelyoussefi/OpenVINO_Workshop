@@ -52,10 +52,10 @@ The basic flow is outlined below:
 ![Build Check](images/openvino_face_detector_bc.jpg)
  - Ensure you have a USB camera connected to your host device before continuing.
  
- - Run the application by pressing **F5** on your keyboard or clicking the **'Local Windows Debugger'** button in the main toolbar.
+ - Double-click the 'create_vs2017_solution.bat' file to generate the VS Solution files > "OpenVINO_Workshop\openvino_face_detection\create_vs2017_solution.bat"
      
 ![Run Application](images/openvino_face_detector_ra.jpg)
- - A console window will load and begin showing debug output. Once the camera has loaded and the main loop begins a window will also appear showing the camera frames and fps values in the top left.
+ - Once the camera has loaded and the main loop begins a window will also appear showing the camera frames and fps values in the top left.
  
 ![Application Running](images/openvino_face_detector_ar.jpg)
  - Press the **Esc** to stop the application
