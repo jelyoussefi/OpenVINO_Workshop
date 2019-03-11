@@ -22,9 +22,9 @@ Alternatively, you can download the entire repository as a `.zip` file from the 
 ## Getting Started
 
 - The tutorial code is provided as a CMake project so the first step is to use a CMake generator to generate our Visual Studio Solution so we can use the Visual Studio IDE for developing and debugging the code. A batch file to automate this process is provided in the project directory:
-	- **Double-click** the **'create_vs2017_solution.bat'** file to generate the VS Solution files > **"OpenVINO_Workshop\openvino_face_detection\create_vs2017_solution.bat"**
+	- **Double-click** the **'create_vs2017_solution.bat'** file to generate the VS Solution files > **"openvino_face_detection\create_vs2017_solution.bat"**
 
-- Once completed you can load the **'openvino_face_detection'** Visual Studio Solution file which you just generated > **"OpenVINO_Workshop\openvino_face_detection\build\openvino_face_detection.sln"**
+- Once completed you can load the **'openvino_face_detection'** Visual Studio Solution file which you just generated > **"openvino_face_detection\build\openvino_face_detection.sln"**
 
 - Once Visual Studio has loaded, expand the **face_detector** project in the **Solution Explorer** in the right-hand pane and navigate to the **'src'** directory. **Double-click** on the **main.cpp** file to load the main application code.
 
@@ -52,7 +52,7 @@ The basic flow is outlined below:
 ![Build Check](images/openvino_face_detector_bc.jpg)
  - Ensure you have a USB camera connected to your host device before continuing.
  
- - Double-click the 'create_vs2017_solution.bat' file to generate the VS Solution files > "OpenVINO_Workshop\openvino_face_detection\create_vs2017_solution.bat"
+ - **Double-click** the **'face_detector.bat'** file to start the application > "openvino_face_detection\face_detector.bat"
      
 ![Run Application](images/openvino_face_detector_ra.jpg)
  - Once the camera has loaded and the main loop begins a window will also appear showing the camera frames and fps values in the top left.
