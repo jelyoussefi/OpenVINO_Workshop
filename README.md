@@ -64,6 +64,9 @@ We will now add the necessary code to implement real-time face detection using t
 ### Full Implementation
 the **"openvino_face_detection\src\main_openvino.cpp"** file contains the full implementation of the Face Detection using Intel® OpenVINO™ Toolkit. Copy this file to openvino_face_detection\src\main.cpp and repeat again the "Build & Run The Code" steps.
 
+![Application Running](images/openvino_face_detector_ar2.jpg)
+
+
 ### Understanding The Code
 A typical Inference Engine API workflow which we will implement in the following section is outlined below:
 
@@ -276,7 +279,6 @@ The **Main Loop** should now look like this...
      
     - When the output window loads and begins showing the camera frames you will notice that faces are bound by a red box. The value above the box is the confidence level. Run the application for a while and note down the average **fps** shown in the top left of the output window. In the next section we will look at ways to improve inference performance.
  
-![Application Running](images/openvino_face_detector_ar2.jpg)
 
  - Press the **Esc** to stop the application
 
