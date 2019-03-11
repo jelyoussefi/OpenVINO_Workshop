@@ -9,16 +9,15 @@ In this tutorial you will build a simple application capable of detecting faces 
 If you have `git` installed, the easiest way to access these files is to clone the repository to the directory of your choice:
 
 ```console
-    git clone https://github.com/realpython/materials.git
+    git clone https://github.com/jelyoussefi/OpenVINO_Workshop
 ```
-
 
 
 ### Without `git`
 
 Alternatively, you can download the entire repository as a `.zip` file from the repository's [homepage](https://github.com/jelyoussefi/OpenVINO_Workshop) using the green "Clone or download" button in the top right hand corner.
 
-![Download repo as zip](download-zip.gif)
+![Download repo as zip](images/download-zip.jpg)
 
 ## Getting Started
 
