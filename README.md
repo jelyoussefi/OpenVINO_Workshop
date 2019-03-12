@@ -89,7 +89,7 @@ Other demonstration objectives:
 
 ```
 
-#### Downloading and Optimizing the model (squeezenet)
+#### Downloading and Optimizing the model (mobilenet-ssd)
 
 ```console
     c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name mobilenet-ssd --output_dir  models
@@ -99,7 +99,7 @@ Other demonstration objectives:
     c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --scale 256 --mean_values [127,127,127] --input_model models\object_detection\common\mobilenet-ssd\caffe\mobilenet-ssd.caffemodel --data_type FP16 --output_dir models\ir\FP16
 ```
 #### Adding the label file
--Copy the following lines into **"C:\Users\\<username\>\models\ir\FP32\mobilenet-ssd.labels" file
+- Copy the following lines into **"C:\Users\\<username\>\models\ir\FP32\mobilenet-ssd.labels" file
 ```console
 background
 aeroplane
