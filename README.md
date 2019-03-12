@@ -61,10 +61,7 @@ The basic flow is outlined below:
 ## Face Detection using Intel® OpenVINO™ Toolkit
 We will now add the necessary code to implement real-time face detection using the Intel(® OpenVINO™ Toolkit. We will specifically be using the Inference Engine API included as part of the toolkit along with an Intel® provided pretrained model which will allow us to perform inference on each camera frame and highlight faces detected within it.
 
-### Full Implementation
-- The **"openvino_face_detection\src\main_openvino.cpp"** file contains the full implementation of the Face Detection using Intel® OpenVINO™ Toolkit. Copy this file to **"openvino_face_detection\src\main.cpp"** 
 
-- Once again [build and run the solution](#buildAndRunTheCode).
 
 ![Application Running](images/openvino_face_detector_ar2.jpg)
 
@@ -426,7 +423,7 @@ std::string device = "MYRIAD";
 
 ![CPU Usage](images/openvino_face_detector_ppr3.jpg)
 
-> If you missed some steps or didn't have time to finish the tutorial the completed code is available in the **openvino_face_detection_final** directory.
+> If you missed some steps or didn't have time to finish the tutorial the completed code is available in the **"openvino_face_detection\src\main_openvino.cpp"** file. Copy this file to **"openvino_face_detection\src\main.cpp"** and once again [build and run the solution](#buildAndRunTheCode).
 
 ## Conclusion
 In this tutorial we have created a simple application which is able to detect faces in a live camera stream using the Intel® OpenVINO™ Toolkit and an SSD pretrained model. We looked at the basic OpenVINO™ workflow and used the Inference Engine API to add basic face detection functionality to our application. We then looked at ways of improving performance by taking advantage of asynchronous calls in the Inference Engine API before exploring the ease of which the same code can be run on various different hardware in the Intel® portfolio such as GPUs and Intel® Myriad™ VPUs.
