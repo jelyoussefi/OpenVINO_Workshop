@@ -33,7 +33,7 @@ Follow these steps to prepare your Windows computer for the samples:
 ### Image Classification Sample
 #### Description
 
-This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like AlexNet* and GoogLeNet*.
+This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like SqueezeNet* and GoogLeNet*.
 
 #### How It Works
 
@@ -187,6 +187,8 @@ The new Async API operates with a new notion of the Infer Request that encapsula
 ```console
 .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\interactive_face_detection_demo.exe -i cam  -m c:\Intel\computer_vision_sdk\deployment_tools\intel_models\face-detection-adas-0001\FP32\face-detection-adas-0001.xml -m_ag c:\Intel\computer_vision_sdk\deployment_tools\intel_models\age-gender-recognition-retail-0013\FP16\age-gender-recognition-retail-0013.xml -m_em c:\Intel\computer_vision_sdk\deployment_tools\intel_models\emotions-recognition-retail-0003\FP16\emotions-recognition-retail-0003.xml -d_ag MYRIAD -d_em GPU
 ```
+
+## Next Steps
 
 A number of Inference Engine samples are included with OpenVINO™ which allow you to explore it's capabilities using pretrained models. The sample executables can be found in the following directory:
 
