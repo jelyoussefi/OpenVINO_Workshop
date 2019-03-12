@@ -34,7 +34,7 @@ Follow these steps to prepare your Windows computer for the samples:
 ## Running the Samples
 
 ### Image Classification Sample
-#### Description
+#### * Description
 
 This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like AlexNet* and GoogLeNet*.
 
