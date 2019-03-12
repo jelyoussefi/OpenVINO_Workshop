@@ -44,7 +44,7 @@ Upon the start-up, the sample application reads command-line parameters and load
 - Open a command prompt (cmd) and execute the following instruction
 
 ```console
-    c:\Intel\computer_vision_sdk\bin\setupvars.bat
+c:\Intel\computer_vision_sdk\bin\setupvars.bat
 
 ```
 
@@ -54,23 +54,24 @@ Upon the start-up, the sample application reads command-line parameters and load
 #### Downloading and Optimizing the model (squeezenet)
 
 ```console
-    c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
+c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
 
-    c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
+c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
 ```
 #### Adding the label file
 ```console
-     copy c:\Intel\computer_vision_sdk\deployment_tools\demo\squeezenet1.1.labels .\models\ir\FP32\
+copy c:\Intel\computer_vision_sdk\deployment_tools\demo\squeezenet1.1.labels .\models\ir\FP32\
 ```
 
 #### Running
+
 ##### CPU
 ```console
-    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml
+.\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml
 ```
 ##### GPU
 ```console
-    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml -d GPU
+.\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml -d GPU
 ```
 
 ### Object Detection SSD Demo / Async API 
