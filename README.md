@@ -42,12 +42,14 @@ Upon the start-up, the sample application reads command-line parameters and load
 #### Set the enviromenent variables
 
 - Open a command prompt (cmd) and execute the following instruction
-![command prompt](images/command-prompt.jpg)
 
 ```console
     c:\Intel\computer_vision_sdk\bin\setupvars.bat
 
 ```
+
+![command prompt](images/command-prompt.jpg)
+
 
 #### Downloading and Optimizing the model (squeezenet)
 
