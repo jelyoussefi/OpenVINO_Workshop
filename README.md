@@ -33,11 +33,13 @@ Follow these steps to prepare your Windows computer for the samples:
 
 ## Running the Samples
 
-###Image Classification Sample
+### Image Classification Sample
 * Description
+
 This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like AlexNet* and GoogLeNet*.
 
 * How It Works
+
 Upon the start-up, the sample application reads command-line parameters and loads a network and an image to the Inference Engine plugin. When inference is done, the application creates an output image and outputs data to the standard output stream.
 
 * Running
