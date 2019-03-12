@@ -36,23 +36,36 @@ Follow these steps to prepare your Windows computer for the samples:
 ### Image Classification Sample
 #### Description
 
-    This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like AlexNet* and GoogLeNet*.
+This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like AlexNet* and GoogLeNet*.
 
 #### How It Works
 
-    Upon the start-up, the sample application reads command-line parameters and loads a network and an image to the Inference Engine plugin. When inference is done, the application creates an output image and outputs data to the standard output stream.
+Upon the start-up, the sample application reads command-line parameters and loads a network and an image to the Inference Engine plugin. When inference is done, the application creates an output image and outputs data to the standard output stream.
+
+#### Set the enviromenent variables
+
+- Open a command prompt (cmd) and execute the following instruction
+```console
+    c:\Intel\computer_vision_sdk\bin\setupvars.bat
+
+```
 
 #### Downloading and Optimizing the model (squeezenet)
 
-- Open a command line
-
 ```console
-c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
+    c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
 
-c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
+    c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
 ```
-#### Running
+#### Adding the label file
+```console
+     copy c:\Intel\computer_vision_sdk\deployment_tools\demo\squeezenet1.1.labels .\models\ir\FP32\
+```
 
+#### Running
+```console
+    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml
+```
 
 ## Conclusion
 In this tutorial we have created a simple application which is able to detect faces in a live camera stream using the Intel® OpenVINO™ Toolkit and an SSD pretrained model. We looked at the basic OpenVINO™ workflow and used the Inference Engine API to add basic face detection functionality to our application. We then looked at ways of improving performance by taking advantage of asynchronous calls in the Inference Engine API before exploring the ease of which the same code can be run on various different hardware in the Intel® portfolio such as GPUs and Intel® Myriad™ VPUs.
