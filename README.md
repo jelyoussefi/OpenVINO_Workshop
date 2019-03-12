@@ -1,22 +1,17 @@
   
-# Simple Face Detection using Intel® OpenVINO™ Toolkit (Windows)
-In this tutorial you will build a simple application capable of detecting faces in a live camera stream using the Intel® OpenVINO™ Toolkit and an Intel® pretrained model. Once completed you will have an understanding of the code required to start creating your own OpenVINO™ based solutions and how to target various accelerators in the Intel® portfolio (CPU, GPU, VPU).
+# Intel® OpenVINO™ Toolkit (Windows)
+In this tutorial you will build and run some of samples applications which come with the Intel® OpenVINO™ Toolkit and an Intel® pretrained model. Once completed you will have an understanding of the code required to start creating your own OpenVINO™ based solutions and how to target various accelerators in the Intel® portfolio (CPU, GPU, VPU).
 
-## Downloading the Files
+## System Requirements
+* Operating Systems
 
-### With `git`
+	* Microsoft Windows* 10 64-bit
 
-If you have `git` installed, the easiest way to access these files is to clone the repository to the directory of your choice:
+## Prerequisites
+* [Install Intel® Distribution of OpenVINO™ toolkit for Windows* 10](https://software.intel.com/en-us/articles/OpenVINO-Install-Windows)
 
-```console
-    git clone https://github.com/jelyoussefi/OpenVINO_Workshop
-```
 
-### Without `git`
 
-Alternatively, you can download the entire repository as a `.zip` file from the repository's [homepage](https://github.com/jelyoussefi/OpenVINO_Workshop) using the green "Clone or download" button in the top right hand corner.
-
-![Download repo as zip](images/download-zip.jpg)
 
 ## Getting Started
 
