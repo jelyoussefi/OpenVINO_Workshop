@@ -42,6 +42,8 @@ Upon the start-up, the sample application reads command-line parameters and load
 #### Set the enviromenent variables
 
 - Open a command prompt (cmd) and execute the following instruction
+![command prompt](images/command-prompt.jpg)
+
 ```console
     c:\Intel\computer_vision_sdk\bin\setupvars.bat
 
@@ -60,8 +62,13 @@ Upon the start-up, the sample application reads command-line parameters and load
 ```
 
 #### Running
+##### CPU
 ```console
     .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml
+```
+##### GPU
+```console
+    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\classification_sample.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\car.png -m .\models\ir\FP32\squeezenet1.1.xml -d GPU
 ```
 
 ### Object Detection SSD Demo / Async API 
@@ -89,11 +96,11 @@ Other demonstration objectives:
 #### Downloading and Optimizing the model (mobilenet-ssd)
 
 ```console
-    c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name mobilenet-ssd --output_dir  models
+c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name mobilenet-ssd --output_dir  models
 
-    c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --scale 256 --mean_values [127,127,127] --input_model models\object_detection\common\mobilenet-ssd\caffe\mobilenet-ssd.caffemodel --data_type FP32 --output_dir models\ir\FP32
+c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --scale 256 --mean_values [127,127,127] --input_model models\object_detection\common\mobilenet-ssd\caffe\mobilenet-ssd.caffemodel --data_type FP32 --output_dir models\ir\FP32
 
-    c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --scale 256 --mean_values [127,127,127] --input_model models\object_detection\common\mobilenet-ssd\caffe\mobilenet-ssd.caffemodel --data_type FP16 --output_dir models\ir\FP16
+c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --scale 256 --mean_values [127,127,127] --input_model models\object_detection\common\mobilenet-ssd\caffe\mobilenet-ssd.caffemodel --data_type FP16 --output_dir models\ir\FP16
 ```
 #### Adding the label file
 - Copy the following lines into **"C:\Users\\<username\>\models\ir\FP32\mobilenet-ssd.labels"** file
@@ -122,22 +129,18 @@ tvmonitor
 ```
 - Then
 ```console
-    copy .\models\ir\FP32\mobilenet-ssd.labels .\models\ir\FP16\mobilenet-ssd.labels
+copy .\models\ir\FP32\mobilenet-ssd.labels .\models\ir\FP16\mobilenet-ssd.labels
 ```
 #### Running
 ** You can use 'Tab' to switch between the synchronized execution and the true Async mode.**
 
 ##### CPU
 ```console
-    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\cars.mp4 -m .\models\ir\FP32\mobilenet-ssd.xml -d CPU
-```
-##### GPU
-```console
-    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\cars.mp4 -m .\models\ir\FP32\mobilenet-ssd.xml -d GPU
+.\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i cam -m .\models\ir\FP32\mobilenet-ssd.xml -d CPU
 ```
 ##### MOVIDIUS
 ```console
-    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\cars.mp4 -m .\models\ir\FP32\mobilenet-ssd.xml -d MYRIAD
+.\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i cam -m .\models\ir\FP16\mobilenet-ssd.xml -d MYRIAD
 ```
 ##### Demo Output
 The output uses OpenCV* to display the resulting frame with detections rendered as bounding boxes and labels, if provided. In default mode, the demo reports:
@@ -179,7 +182,7 @@ The new Async API operates with a new notion of the Infer Request that encapsula
 ```
 #### Running
 ```console
-.\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\interactive_face_detection_demo.exe -i cam  -m <path_to_model>/face-detection-adas-0001.xml -m_ag <path_to_model>/age-gender-recognition-retail-0013.xml -m_hp <path_to_model>/head-pose-estimation-adas-0001.xml -m_em <path_to_model>/emotions-recognition-retail-0003.xml -m_lm <path_to_model>/facial-landmarks-35-adas-0001.xml -d GPU
+.\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\interactive_face_detection_demo.exe -i cam  -m c:\Intel\computer_vision_sdk\deployment_tools\intel_models\face-detection-adas-0001\FP32\face-detection-adas-0001.xml -m_ag c:\Intel\computer_vision_sdk\deployment_tools\intel_models\age-gender-recognition-retail-0013\FP16\age-gender-recognition-retail-0013.xml -m_em c:\Intel\computer_vision_sdk\deployment_tools\intel_models\emotions-recognition-retail-0003\FP16\emotions-recognition-retail-0003.xml -d_ag MYRIAD -d_em GPU
 ```
 
 A number of Inference Engine samples are included with OpenVINO™ which allow you to explore it's capabilities using pretrained models. The sample executables can be found in the following directory:
