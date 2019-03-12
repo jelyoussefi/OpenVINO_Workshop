@@ -33,13 +33,6 @@ Follow these steps to prepare your Windows computer for the samples:
 
 ## Running the Samples
 
-- Open a command line
-
-```console
-c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
-
-c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
-```
 ### Image Classification Sample
 #### Description
 
@@ -50,7 +43,13 @@ c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_mode
     Upon the start-up, the sample application reads command-line parameters and loads a network and an image to the Inference Engine plugin. When inference is done, the application creates an output image and outputs data to the standard output stream.
 
 #### Downloading and Optimizing the model (squeezenet)
+
+- Open a command line
+
 ```console
+c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
+
+c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
 ```
 #### Running
 
