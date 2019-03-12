@@ -10,9 +10,6 @@ In this tutorial you will build and run some of samples applications which come 
 ## Prerequisites
 * [Install Intel® Distribution of OpenVINO™ toolkit for Windows* 10](https://software.intel.com/en-us/articles/OpenVINO-Install-Windows)
 
-
-
-
 # Building the Sample Applications on Windows* OS
 
 The sample applications are provided as a CMake project so the first step is to use a CMake generator to generate our Visual Studio Solution so we can use the Visual Studio IDE for developing and debugging the code.
@@ -140,7 +137,7 @@ tvmonitor
 ```
 ##### MOVIDIUS
 ```console
-    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\cars.mp4 -m .\models\ir\FP32\mobilenet-ssd.xml -d 
+    .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\object_detection_demo_ssd_async.exe -i c:\Intel\computer_vision_sdk\deployment_tools\demo\cars.mp4 -m .\models\ir\FP32\mobilenet-ssd.xml -d MYRIAD
 ```
 ##### Demo Output
 The output uses OpenCV* to display the resulting frame with detections rendered as bounding boxes and labels, if provided. In default mode, the demo reports:
@@ -184,10 +181,7 @@ The new Async API operates with a new notion of the Infer Request that encapsula
 ```console
 .\Documents\Intel\OpenVINO\inference_engine_samples_2017\intel64\Debug\interactive_face_detection_demo.exe -i cam  -m <path_to_model>/face-detection-adas-0001.xml -m_ag <path_to_model>/age-gender-recognition-retail-0013.xml -m_hp <path_to_model>/head-pose-estimation-adas-0001.xml -m_em <path_to_model>/emotions-recognition-retail-0003.xml -m_lm <path_to_model>/facial-landmarks-35-adas-0001.xml -d GPU
 ```
-## Conclusion
-In this tutorial we have created a simple application which is able to detect faces in a live camera stream using the Intel® OpenVINO™ Toolkit and an SSD pretrained model. We looked at the basic OpenVINO™ workflow and used the Inference Engine API to add basic face detection functionality to our application. We then looked at ways of improving performance by taking advantage of asynchronous calls in the Inference Engine API before exploring the ease of which the same code can be run on various different hardware in the Intel® portfolio such as GPUs and Intel® Myriad™ VPUs.
 
-## Next Steps
 A number of Inference Engine samples are included with OpenVINO™ which allow you to explore it's capabilities using pretrained models. The sample executables can be found in the following directory:
 
 > Documents\Intel\OpenVINO\inference_engine_samples_2015\intel64\Release
