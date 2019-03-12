@@ -20,7 +20,7 @@ Follow these steps to prepare your Windows computer for the samples:
 - Go to the **"C:\Intel\computer_vision_sdk\deployment_tools\inference_engine\samples\"** directory.
 - Double-click **"create_msvc\<version\>_solution.bat"**, where <version> is 2015 or 2017 to match your Visual Studio version. For example, for Microsoft Visual Stuio 2017: **create_msvc2017_solution.bat**. This file generates Microsoft Visual Studio solution.
 Open Microsoft Visual Studio*.
-- Build **"C:\Users\/<username/>\Documents\Intel\OpenVINO\inference_engine_samples_\<version\>\Samples.sln"**, where <version> is 2015 or 2017 depending on your Visual Studio version.
+- Build **"C:\Users\\<username\>\Documents\Intel\OpenVINO\inference_engine_samples_\<version\>\Samples.sln"**, where <version> is 2015 or 2017 depending on your Visual Studio version.
 - The sample application binaries are in the **"C:\Users\<username>\Documents\Intel\OpenVINO"** directory.
 
 
