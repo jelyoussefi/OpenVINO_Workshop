@@ -135,7 +135,7 @@ tvmonitor
 copy .\models\ir\FP32\mobilenet-ssd.labels .\models\ir\FP16\mobilenet-ssd.labels
 ```
 #### Running
-** You can use 'Tab' to switch between the synchronized execution and the true Async mode.***
+**You can use 'Tab' to switch between the synchronized execution and the true Async mode.**
 
 ##### CPU
 ```console
