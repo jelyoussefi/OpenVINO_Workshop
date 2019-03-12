@@ -22,7 +22,6 @@ Follow these steps to prepare your Windows computer for the samples:
 - Go to the **"C:\Intel\computer_vision_sdk\deployment_tools\inference_engine\samples\"** directory.
 
 - Double-click **"create_msvc\<version\>_solution.bat"**, where <version> is 2015 or 2017 to match your Visual Studio version. For example, for Microsoft Visual Stuio 2017: **create_msvc2017_solution.bat**. This file generates Microsoft Visual Studio solution.
-Open Microsoft Visual Studio*.
 
 - **Double-click** the **"C:\Users\\<username\>\Documents\Intel\OpenVINO\inference_engine_samples_\<version\>\Samples.sln"** file which you just generated , where <version> is 2015 or 2017 depending on your Visual Studio version.
 
@@ -31,6 +30,17 @@ Open Microsoft Visual Studio*.
 - Make sure the application built successfully by checking the **Output** log in the bottom left pane.
 
 - The sample application binaries are in the **"C:\Users\<username>\Documents\Intel\OpenVINO"** directory.
+
+## Running the Samples
+
+###Image Classification Sample
+* Description
+This topic demonstrates how to run the Image Classification sample application, which does inference using image classification networks like AlexNet* and GoogLeNet*.
+
+* How It Works
+Upon the start-up, the sample application reads command-line parameters and loads a network and an image to the Inference Engine plugin. When inference is done, the application creates an output image and outputs data to the standard output stream.
+
+* Running
 
 
 ## Conclusion
@@ -49,3 +59,8 @@ You can find additional information about the samples with examples of how to us
 [Inference Engine Developer Guide](https://software.intel.com/en-us/articles/OpenVINO-InferEngine)
 
 [Pretrained Models](https://software.intel.com/en-us/openvino-toolkit/documentation/pretrained-models)
+
+
+c:\Intel\computer_vision_sdk\deployment_tools\model_downloader\downloader.py --name squeezenet1.1 --output_dir  models
+
+c:\Intel\computer_vision_sdk\deployment_tools\model_optimizer\mo.py --input_model models\classification\squeezenet\1.1\caffe\squeezenet1.1.caffemodel --output_dir models\ir\FP32
